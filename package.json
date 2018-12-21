@@ -1,0 +1,32 @@
+{
+  "name": "thinktribe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "client": "cd client && yarn start",
+      "server": "nodemon server.js",
+      "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awilliams62090/thinkTribe.git"
+  },
+  "author": "Alyssa Williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awilliams62090/thinkTribe/issues"
+  },
+  "homepage": "https://github.com/awilliams62090/thinkTribe#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.0",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  }
+}
