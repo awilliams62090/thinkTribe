@@ -60,6 +60,11 @@ typings/
 # next.js build output
 .next
 
+.DS_Store
+*.orig
+.idea/
+.vscode/
+
 #----------### Chatkit API info ###----------#
 # Instance Locator: 
 v1:us1:d3e35e53-7e46-4ed1-9843-30334e9175d4
