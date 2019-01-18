@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+#----------### Chatkit API info ###----------#
+# Instance Locator: 
+v1:us1:d3e35e53-7e46-4ed1-9843-30334e9175d4
+
+# Secret Key: 
+0b5769e1-6352-42e8-a00b-2ce75f97c83c:RMCj1UkqACzkYBZSB65ENemSXdjfz9pgp/ejWEqO+8M=
