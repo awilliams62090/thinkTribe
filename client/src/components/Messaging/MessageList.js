@@ -1,35 +1,33 @@
-import React, { Component } from 'react'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Message from './Message'
+import "./Messaging.css"
 
-const DUMMY_DATA = [
-    {
-        senderId: "Alyssa", 
-        text: "Test 1"
-    }, 
-    {
-        senderId: "Greg", 
-        text: "Test 2"
-    }, 
-    {
-        senderId: "Alyssa", 
-        text: "Test 3"
-    }
-]
-
-class MessageList extends Component {
-  render() {
-    return (
-      <div className="message-list">
-        {DUMMY_DATA.map((message, index) =>{
-            return(
-                <div>
-                    <div>{message.senderId}</div>
-                    <div>{message.text}</div>
-                </div>
-            )
-        })}
-      </div>
-    );
-  }
+class MessageList extends React.Component {
+    
+  componentWillUpdate() {
+    const node = ReactDOM.findDOMNode(this)
+    this.shouldScrollToBottom = node.scrollTop + node.clientHeight + 100 >= node.scrollHeight
 }
 
-export default MessageList;
+componentDidUpdate() {
+    if (this.shouldScrollToBottom) {
+        const node = ReactDOM.findDOMNode(this)
+        node.scrollTop = node.scrollHeight   
+    }
+}
+
+  render() {
+        return (
+            <div className="message-list">
+                {this.props.messages.map((message, index) => {
+                    return (
+                        <Message key={message.id} username={message.senderId} text={message.text} />
+                    )
+                })}
+            </div>
+        )
+    }
+}
+
+export default MessageList

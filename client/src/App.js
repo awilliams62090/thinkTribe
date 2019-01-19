@@ -6,13 +6,12 @@ import Home from "./pages/Home";
 import Mailbox from "./pages/Mailbox";
 import UserCalendar from "./pages/UserCalendar";
 import Todos from "./pages/Todos";
-import "./App.css"
+// import "./App.css"
 
 function App() {
   return (
     <Router>
       <div>
-        <Nav />
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/calendar" component={UserCalendar} />

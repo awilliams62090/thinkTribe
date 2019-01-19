@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import TaskList from "../components/Tasks/TaskList";
+import Nav from "../components/Layout/Nav"
 import Header from "../components/Layout/Header";
 import AddTask from "../components/Tasks/AddTask";
 import "../App.css";
@@ -48,6 +49,7 @@ class Todos extends Component {
         console.log(this.state.tasks);
         return (
             <div>
+            <Nav />
             <Header />
             <AddTask addTask={this.addTask} />
             <TaskList tasks= {this.state.tasks} markComplete={this.markComplete} delTask={this.delTask}/>
